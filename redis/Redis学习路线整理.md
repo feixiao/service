@@ -4,6 +4,7 @@
 
 + [《Redis入门指南》](https://book.douban.com/subject/24522045/)
 + [《Redis实战》](https://book.douban.com/subject/26612779/)
++ [Redis几种数据结构的应用场景](http://blog.csdn.net/xiaoliuliu2050/article/details/73250708)
 
 #### 集群方案
 
