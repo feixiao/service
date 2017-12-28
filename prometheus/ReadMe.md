@@ -4,24 +4,45 @@
 
 + [《基于Prometheus的分布式在线服务监控实践》](https://zhuanlan.zhihu.com/p/24811652?refer=cloudsre)
 
+### 客户机安装exporter
+
++ 我这边选择[Node/system metrics exporter](https://github.com/prometheus/node_exporter) (**official**),其他工具的选择参考[《Exporters and integrations》](https://prometheus.io/docs/instrumenting/exporters/)
+
++ node_exporter
+
+  ```
+  tar -zxvf node_exporter-0.15.2.linux-amd64.tar.gz
+  ./node_exporter
+  ```
+
 ### Prometheus安装和运行
 
-+ 获取安装包 [二进制程序](https://prometheus.io/download/)
++  获取安装包 [二进制程序](https://prometheus.io/download/)
 
-+ 解压安装
++  解压安装
 
-  ```shell
-   mv prometheus-2.0.0.linux-amd64.tar.gz  /opt/
-   tar -zxvf prometheus-2.0.0.linux-amd64.tar.gz
-  ```
+   ```shell
+    mv prometheus-2.0.0.linux-amd64.tar.gz  /opt/
+    tar -zxvf prometheus-2.0.0.linux-amd64.tar.gz
+   ```
 
++  修改配置文件
+
+   ```
+    #  添加监控目标
+   - job_name: 'node'
+      static_configs:
+        - targets: ['localhost:9100']
+   ```
 + 启动
 
-  ```shell
-  ./prometheus --config.file=prometheus.yml
+  ```
+    ./prometheus --config.file=prometheus.yml
   ```
 
+
 + 其他安装方式 [参考资料](https://prometheus.io/docs/prometheus/latest/installation/)
++ 浏览地址： http://172.17.228.13:9090/
 
 
 ### Grafana部署
@@ -50,26 +71,10 @@
 
   通过添加数据库的方式进行。
 
-### MySQL的dashboards
 
-+ 下载[grafana-dashboards](https://github.com/percona/grafana-dashboards/releases/tag/v1.5.3)
+### 客户机安装exporter
 
-+ 安装和重启grafana
-
-  ```shell
-  cp -rf grafana-dashboards-1.5.3/dashboards /var/lib/grafana/dashboards
-
-  #修改配置文件
-  vi /etc/grafana/grafana.ini
-  [dashboards.json]
-  enabled = false
-  path = /var/lib/grafana/dashboards
-
-  #重启
-  /etc/init.d/grafana-server restart
-  ```
-
-### mysqld_exporter && node_exporter
++ 我这边选择[Node/system metrics exporter](https://github.com/prometheus/node_exporter) (**official**),其他工具的选择参考[《Exporters and integrations》](https://prometheus.io/docs/instrumenting/exporters/)
 
 + node_exporter
 
@@ -77,17 +82,6 @@
   tar -zxvf node_exporter-0.15.2.linux-amd64.tar.gz
   ./node_exporter
   ```
-
-
-
-
-
-
-
-### 客户机安装exporter
-
-+ 我这边选择[Node/system metrics exporter](https://github.com/prometheus/node_exporter) (**official**),其他工具的选择参考[《Exporters and integrations》](https://prometheus.io/docs/instrumenting/exporters/)
-+ ​
 
 ### 参考资料
 
