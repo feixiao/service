@@ -14,6 +14,9 @@ import(
 // sample 原地址：  https://github.com/go-kit/kit/tree/master/examples/stringsvc1
 // 注解：http://blog.chunshengster.me/2016/05/28/go_kit_ru_men_er_di_yi_ge_go_kit_cheng_xu/
 
+// 验证方法：
+// curl -XPOST -d'{"s":"hello, world"}' localhost:8080/uppercase
+// curl -XPOST -d'{"s":"hello, world"}' localhost:8080/count
 
 // ErrEmpty 提示输入为空
 var ErrEmpty = errors.New("empty string")
