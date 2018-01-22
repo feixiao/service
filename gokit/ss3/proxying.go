@@ -44,14 +44,18 @@ func proxyingMiddleware(ctx context.Context, instances string, logger log.Logger
 	for _, instance := range instanceList {
 		var e endpoint.Endpoint
 		e = makeUppercaseProxy(ctx, instance)
+		// 断路器
 		e = circuitbreaker.Gobreaker(gobreaker.NewCircuitBreaker(gobreaker.Settings{}))(e)
+		// 限流器
 		e = ratelimit.NewErroringLimiter(rate.NewLimiter(rate.Every(time.Second), qps))(e)
 		endpointer = append(endpointer, e)
 	}
 
 	// Now, build a single, retrying, load-balancing endpoint out of all of
 	// those individual endpoints.
+	// 负载均衡器包装了 发布器，并且从端点集合中选择其中的某一个。
 	balancer := lb.NewRoundRobin(endpointer)
+	// 重试的策略可以将一个失败的请求进行重试，直到达到最大的可重试次数或是达到超时时间。
 	retry := lb.Retry(maxAttempts, maxTime, balancer)
 
 	// And finally, return the ServiceMiddleware, implemented by proxymw.
