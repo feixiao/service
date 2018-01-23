@@ -31,6 +31,6 @@ shipping由booking、handling和tracking三个服务组成。每个服务都是�
 
 + location	模拟位置信息
 
-+ ​
++ voyage   模拟航线信息
 
   ​
