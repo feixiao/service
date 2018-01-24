@@ -1,7 +1,6 @@
 ## shipping
 
-shipping演示了一个更真实的由多个服务组成的应用程序。
-
+shipping演示了一个更真实的由多个服务组成的应用程序。 程序详细情况参考书籍[《领域驱动设计》](https://book.douban.com/subject/26819666/)。
 
 
 ### 结构
