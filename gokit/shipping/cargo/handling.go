@@ -18,8 +18,9 @@ type HandlingActivity struct {
 }
 
 // HandlingEvent 用于注册“何时”的事件，比如：货物在给定的时间点被卸货
+// HandlingEvent（处理事件）是对Cargo采取的不同操作，如将它装上船或清关。这个类可以被细化为一个由不同种类的事件（如装货、卸货或由收货人提货）构成的层次结构。
 type HandlingEvent struct {
-	TrackingID TrackingID
+	TrackingID TrackingID			
 	Activity   HandlingActivity
 }
 

@@ -9,12 +9,12 @@ import (
 	"github.com/pborman/uuid"
 )
 
-// TrackingID 唯一表示一个特定的货运
+// TrackingID 唯一表示一个特定的货物
 type TrackingID string
 
 // Cargo is the central class in the domain model.
 type Cargo struct {
-	TrackingID         TrackingID
+	TrackingID         TrackingID				// 说明Cargo是一个实体
 	Origin             location.UNLocode
 	RouteSpecification RouteSpecification
 	Itinerary          Itinerary
