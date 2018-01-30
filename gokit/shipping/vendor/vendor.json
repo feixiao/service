@@ -3,12 +3,203 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "nGg8RnGMNnWG1e5auZ/LPn1whJg=",
+			"path": "github.com/afex/hystrix-go/hystrix",
+			"revision": "f118cd938f786d24f46cc307981d8f63b7951020",
+			"revisionTime": "2017-08-15T23:46:12Z"
+		},
+		{
+			"checksumSHA1": "U0ciFGz5i3PUxw9tUdpsqDaD4Ug=",
+			"path": "github.com/afex/hystrix-go/hystrix/metric_collector",
+			"revision": "f118cd938f786d24f46cc307981d8f63b7951020",
+			"revisionTime": "2017-08-15T23:46:12Z"
+		},
+		{
+			"checksumSHA1": "ERbZ6cXXPJhus2uCOo5A6uFFfQw=",
+			"path": "github.com/afex/hystrix-go/hystrix/rolling",
+			"revision": "f118cd938f786d24f46cc307981d8f63b7951020",
+			"revisionTime": "2017-08-15T23:46:12Z"
+		},
+		{
+			"checksumSHA1": "spyv5/YFBjYyZLZa1U2LBfDR8PM=",
+			"path": "github.com/beorn7/perks/quantile",
+			"revision": "4c0e84591b9aa9e6dcfdf3e020114cd81f89d5f9",
+			"revisionTime": "2016-08-04T10:47:26Z"
+		},
+		{
+			"checksumSHA1": "aUEp6nQansSqG2MTob/Apj48VgM=",
+			"path": "github.com/go-kit/kit/circuitbreaker",
+			"revision": "4dc7be5d2d12881735283bcab7352178e190fc71",
+			"revisionTime": "2017-10-03T13:44:44Z",
+			"version": "v0.6.0",
+			"versionExact": "v0.6.0"
+		},
+		{
+			"checksumSHA1": "0x6tKraaJRo//YVEB2FotP2Mhww=",
+			"path": "github.com/go-kit/kit/endpoint",
+			"revision": "4dc7be5d2d12881735283bcab7352178e190fc71",
+			"revisionTime": "2017-10-03T13:44:44Z",
+			"version": "v0.6.0",
+			"versionExact": "v0.6.0"
+		},
+		{
+			"checksumSHA1": "KrIRJ4p3nRze4NcxfgX5+N9+D1M=",
+			"path": "github.com/go-kit/kit/log",
+			"revision": "4dc7be5d2d12881735283bcab7352178e190fc71",
+			"revisionTime": "2017-10-03T13:44:44Z",
+			"version": "v0.6.0",
+			"versionExact": "v0.6.0"
+		},
+		{
+			"checksumSHA1": "nTvjvV5LXuF2GYf7jIi+OFb1mjk=",
+			"path": "github.com/go-kit/kit/metrics",
+			"revision": "953e747656a7bbb5e1f998608b460458958b70cc",
+			"revisionTime": "2017-12-19T00:03:56Z"
+		},
+		{
+			"checksumSHA1": "nqjHqtG6eWaipohdW/nM5h51JVE=",
+			"path": "github.com/go-kit/kit/metrics/internal/lv",
+			"revision": "953e747656a7bbb5e1f998608b460458958b70cc",
+			"revisionTime": "2017-12-19T00:03:56Z"
+		},
+		{
+			"checksumSHA1": "hArYy708bvIGnxJIC/Tr/ehkUms=",
+			"path": "github.com/go-kit/kit/metrics/prometheus",
+			"revision": "4dc7be5d2d12881735283bcab7352178e190fc71",
+			"revisionTime": "2017-10-03T13:44:44Z",
+			"version": "v0.6.0",
+			"versionExact": "v0.6.0"
+		},
+		{
+			"checksumSHA1": "qVNlGKkuj56lWYtY+4wHYmNcdZU=",
+			"path": "github.com/go-kit/kit/transport/http",
+			"revision": "4dc7be5d2d12881735283bcab7352178e190fc71",
+			"revisionTime": "2017-10-03T13:44:44Z",
+			"version": "v0.6.0",
+			"versionExact": "v0.6.0"
+		},
+		{
+			"path": "github.com/go-kit/log",
+			"revision": "v0.6.0",
+			"version": "v0.6.0"
+		},
+		{
+			"checksumSHA1": "KxX/Drph+byPXBFIXaCZaCOAnrU=",
+			"path": "github.com/go-logfmt/logfmt",
+			"revision": "390ab7935ee28ec6b286364bba9b4dd6410cb3d5",
+			"revisionTime": "2016-11-15T14:25:13Z"
+		},
+		{
+			"checksumSHA1": "luu+ud4XYZhlCoNnSAwCJlbh0Bg=",
+			"path": "github.com/go-stack/stack",
+			"revision": "259ab82a6cad3992b4e21ff5cac294ccb06474bc",
+			"revisionTime": "2017-11-12T03:14:02Z"
+		},
+		{
+			"checksumSHA1": "WX1+2gktHcBmE9MGwFSGs7oqexU=",
+			"path": "github.com/golang/protobuf/proto",
+			"revision": "925541529c1fa6821df4e44ce2723319eb2be768",
+			"revisionTime": "2018-01-25T21:43:03Z"
+		},
+		{
+			"checksumSHA1": "g/V4qrXjUGG9B+e3hB+4NAYJ5Gs=",
+			"path": "github.com/gorilla/context",
+			"revision": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42",
+			"revisionTime": "2016-08-17T18:46:32Z"
+		},
+		{
+			"checksumSHA1": "+FJjoMbY+H7jumeSRMatU8acjTo=",
+			"path": "github.com/gorilla/mux",
+			"revision": "53c1911da2b537f792e7cafcb446b05ffe33b996",
+			"revisionTime": "2018-01-16T17:23:47Z",
+			"version": "v1.6.1",
+			"versionExact": "v1.6.1"
+		},
+		{
+			"checksumSHA1": "abKzFXAn0KDr5U+JON1ZgJ2lUtU=",
+			"path": "github.com/kr/logfmt",
+			"revision": "b84e30acd515aadc4b783ad4ff83aff3299bdfe0",
+			"revisionTime": "2014-02-26T03:06:59Z"
+		},
+		{
+			"checksumSHA1": "bKMZjd2wPw13VwoE7mBeSv5djFA=",
+			"path": "github.com/matttproud/golang_protobuf_extensions/pbutil",
+			"revision": "c12348ce28de40eed0136aa2b644d0ee0650e56c",
+			"revisionTime": "2016-04-24T11:30:07Z"
+		},
+		{
 			"checksumSHA1": "Se195FlZ160eaEk/uVx4KdTPSxU=",
 			"path": "github.com/pborman/uuid",
 			"revision": "e790cca94e6cc75c7064b1332e63811d4aae1a53",
 			"revisionTime": "2017-06-12T15:36:48Z",
 			"version": "v1.1",
 			"versionExact": "v1.1"
+		},
+		{
+			"checksumSHA1": "EfwDcgKw2nTYE6c5mmQCF9rex/Q=",
+			"path": "github.com/prometheus/client_golang/prometheus",
+			"revision": "06bc6e01f4baf4ee783ffcd23abfcb0b0f9dfada",
+			"revisionTime": "2018-01-20T14:10:31Z"
+		},
+		{
+			"checksumSHA1": "DvwvOlPNAgRntBzt3b3OSRMS2N4=",
+			"path": "github.com/prometheus/client_model/go",
+			"revision": "99fa1f4be8e564e8a6b613da7fa6f46c9edafc6c",
+			"revisionTime": "2017-11-17T10:05:41Z"
+		},
+		{
+			"checksumSHA1": "xfnn0THnqNwjwimeTClsxahYrIo=",
+			"path": "github.com/prometheus/common/expfmt",
+			"revision": "89604d197083d4781071d3c65855d24ecfb0a563",
+			"revisionTime": "2018-01-10T21:49:58Z"
+		},
+		{
+			"checksumSHA1": "GWlM3d2vPYyNATtTFgftS10/A9w=",
+			"path": "github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg",
+			"revision": "89604d197083d4781071d3c65855d24ecfb0a563",
+			"revisionTime": "2018-01-10T21:49:58Z"
+		},
+		{
+			"checksumSHA1": "YU+/K48IMawQnToO4ETE6a+hhj4=",
+			"path": "github.com/prometheus/common/model",
+			"revision": "89604d197083d4781071d3c65855d24ecfb0a563",
+			"revisionTime": "2018-01-10T21:49:58Z"
+		},
+		{
+			"checksumSHA1": "lolK0h7LSVERIX8zLyVQ/+7wEyA=",
+			"path": "github.com/prometheus/procfs",
+			"revision": "cb4147076ac75738c9a7d279075a253c0cc5acbd",
+			"revisionTime": "2018-01-25T13:30:57Z"
+		},
+		{
+			"checksumSHA1": "lv9rIcjbVEGo8AT1UCUZXhXrfQc=",
+			"path": "github.com/prometheus/procfs/internal/util",
+			"revision": "cb4147076ac75738c9a7d279075a253c0cc5acbd",
+			"revisionTime": "2018-01-25T13:30:57Z"
+		},
+		{
+			"checksumSHA1": "BXJH5h2ri8SU5qC6kkDvTIGCky4=",
+			"path": "github.com/prometheus/procfs/nfs",
+			"revision": "cb4147076ac75738c9a7d279075a253c0cc5acbd",
+			"revisionTime": "2018-01-25T13:30:57Z"
+		},
+		{
+			"checksumSHA1": "yItvTQLUVqm/ArLEbvEhqG0T5a0=",
+			"path": "github.com/prometheus/procfs/xfs",
+			"revision": "cb4147076ac75738c9a7d279075a253c0cc5acbd",
+			"revisionTime": "2018-01-25T13:30:57Z"
+		},
+		{
+			"checksumSHA1": "6HQLUzskMvCLHDJ0msFjZ8IDqqI=",
+			"path": "github.com/sony/gobreaker",
+			"revision": "3cb67c77c1d1e72fda30c6970578164d24f806b6",
+			"revisionTime": "2017-11-08T10:09:24Z"
+		},
+		{
+			"checksumSHA1": "UoDFF3nZNQYfFmaqVjW9qlYk6Wc=",
+			"path": "github.com/streadway/handy/breaker",
+			"revision": "f450267a206e480d863d2a92846a40f6e2896b2a",
+			"revisionTime": "2016-04-02T20:03:21Z"
 		}
 	],
 	"rootPath": "github.com/feixiao/learning/gokit/shipping"
