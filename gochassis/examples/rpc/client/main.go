@@ -5,7 +5,7 @@ import (
 	_ "github.com/ServiceComb/go-chassis/bootstrap"
 	"github.com/ServiceComb/go-chassis/core"
 	"github.com/ServiceComb/go-chassis/core/lager"
-	"github.com/ServiceComb/go-chassis/examples/schemas/helloworld"
+	"github.com/feixiao/learning/gochassis/examples/schemas/helloworld"
 	"golang.org/x/net/context"
 )
 

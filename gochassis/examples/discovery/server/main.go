@@ -4,7 +4,7 @@ import (
 	"github.com/ServiceComb/go-chassis"
 	_ "github.com/ServiceComb/go-chassis/bootstrap"
 	"github.com/ServiceComb/go-chassis/core/lager"
-	"github.com/ServiceComb/go-chassis/examples/schemas"
+	"github.com/feixiao/learning/gochassis/examples/schemas"
 	serverOption "github.com/ServiceComb/go-chassis/third_party/forked/go-micro/server"
 )
 

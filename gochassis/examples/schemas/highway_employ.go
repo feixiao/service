@@ -1,7 +1,7 @@
 package schemas
 
 import (
-	"github.com/ServiceComb/go-chassis/examples/schemas/employ"
+	"github.com/feixiao/learning/gochassis/examples/schemas/employ"
 
 	"golang.org/x/net/context"
 )

@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/ServiceComb/go-chassis"
 	"github.com/ServiceComb/go-chassis/core/lager"
-	"github.com/ServiceComb/go-chassis/examples/schemas"
+	"github.com/feixiao/learning/gochassis/examples/schemas"
 	serverOption "github.com/ServiceComb/go-chassis/third_party/forked/go-micro/server"
 )
 

@@ -1,7 +1,7 @@
 package schemas
 
 import (
-	"github.com/ServiceComb/go-chassis/examples/schemas/helloworld"
+	"github.com/feixiao/learning/gochassis/examples/schemas/helloworld"
 	"golang.org/x/net/context"
 )
 

@@ -6,8 +6,8 @@ import (
 	"github.com/ServiceComb/go-chassis"
 	"github.com/ServiceComb/go-chassis/core"
 	"github.com/ServiceComb/go-chassis/core/lager"
-	_ "github.com/ServiceComb/go-chassis/examples/plugin/handler"
-	"github.com/ServiceComb/go-chassis/examples/schemas/helloworld"
+	_ "github.com/feixiao/learning/gochassis/examples/plugin/handler"
+	"github.com/feixiao/learning/gochassis/examples/schemas/helloworld"
 	"github.com/ServiceComb/go-chassis/third_party/forked/go-micro/metadata"
 	"golang.org/x/net/context"
 )

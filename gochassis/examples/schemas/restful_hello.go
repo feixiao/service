@@ -8,7 +8,7 @@ import (
 	rf "github.com/ServiceComb/go-chassis/server/restful"
 )
 
-//RestFulHello is a struct used for implementation of restfull hello program
+// RestFulHello is a struct used for implementation of restfull hello program
 type RestFulHello struct {
 }
 
