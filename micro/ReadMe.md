@@ -26,10 +26,52 @@
 ##### Multicast DNS
 
 + [mDNS原理的简单理解](http://www.binkery.com/archives/318.html)
+
 + [Multicast_DNS](https://en.wikipedia.org/wiki/Multicast_DNS)
-+ ​
 
++ 使用方式
 
+  ```shell
+  go run main.go --registry=mdns
+  ```
+
+#### 编写服务(Writing a service)
+
++ 程序例子在 [examples/service](https://github.com/feixiao/examples/tree/master/service).
+
+#### 编写函数(Writing a Function)
+
+Go Micro 包括支持了函数编程模型。
+
++ 程序例子在 [examples/function](https://github.com/feixiao/examples/tree/master/function).
+
+#### 插件(Plugins)
+
+默认情况下面go-micro在核心部分对每个接口只提供了很少的一些实现，但是他们完全可以以插件的形式实现。
+
+[可用的插件]( https://github.com/micro/go-plugins)
+
++ [插件的实现和使用](https://github.com/micro/go-plugins)
+
+#### 包装器(Wrappers)
+
+Go Micro以Wrappers实现中间件的概念。
+
++ 程序例子在 [service/wrapper](https://github.com/feixiao/examples/tree/master/service/wrapper)
+
+  ​
+
+### Micro 
+
+Micro是微服务开发工具集合，目的是简化分布式系统的开发工作。包括如下五个组成部分：
+
+- [**API**](https://micro.mu/docs/api.html) -  API网关：单一的Http协议入口，动态的将HTTP请求转换为RPC请求。
+- [**Web**](https://micro.mu/docs/web.html) - Web网关：用微服务的方式构建Web App。
+- [**CLI**](https://micro.mu/docs/cli.html) - 跟你的微服务交互的命令行接口。
+- [**Bot**](https://micro.mu/docs/bot.html) - A bot for slack and hipchat. CLI equivalent via messaging.
+- [**Sidecar**](https://micro.mu/docs/sidecar.html)- go-micro代理.基于HTTP的，go-micro全特性实现。
+- [**New**](https://micro.mu/docs/new.html) 
+- [**Run**](https://micro.mu/docs/run.html)
 
 ### 参考资料
 
