@@ -67,26 +67,33 @@ Micro是微服务开发工具集合，目的是简化分布式系统的开发工
 
 + [**Go Micro**](https://micro.mu/docs/go-micro.html) - 开发包：插件式的RPC开发框架。
 
-- [**API**](https://micro.mu/docs/api.html) -  API网关：单一的Http协议入口，动态的将HTTP请求转换为RPC请求(HTTP请求)。
++ [**API**](https://micro.mu/docs/api.html) -  API网关：单一的Http协议入口，动态的将HTTP请求转换为RPC请求(HTTP请求)。
 
   ```shell
   micro api --handler=rpc	# 将HTTP请求转换为RPC请求
   micro api # 默认的方式The default handler uses endpoint metadata from the registry to determine service routes
-
-
+  micro api --handler=proxy  # 使用github.com/micro/go-web，HTTP代理实现
   ```
 
-- [**Web**](https://micro.mu/docs/web.html) - Web网关：用微服务的方式构建Web App。
 
-- [**CLI**](https://micro.mu/docs/cli.html) - 跟你的微服务交互的命令行接口。
+  + [api example](https://github.com/feixiao/examples/tree/master/api)
 
-- [**Bot**](https://micro.mu/docs/bot.html) - A bot for slack and hipchat. CLI equivalent via messaging.
++ [**Web**](https://micro.mu/docs/web.html) - 提供了dashboard 查询服务的Web界面。
 
-- [**Sidecar**](https://micro.mu/docs/sidecar.html)- go-micro代理.基于HTTP的，go-micro全特性实现。
++ [**CLI**](https://micro.mu/docs/cli.html) - 跟你的微服务交互的命令行接口。
 
-- [**New**](https://micro.mu/docs/new.html) 
++ [**Bot**](https://micro.mu/docs/bot.html) - The **micro bot** is a bot that sits inside your microservices environment which you can interact with via Slack, HipChat, XMPP, etc. It mimics the functions of the CLI via messaging.
 
-- [**Run**](https://micro.mu/docs/run.html)
+- [**Sidecar**](https://micro.mu/docs/sidecar.html) - go-micro代理。基于HTTP的，go-micro全特性实现。
+
+  ```
+  micro sidecar					# rpc 
+  micro sidecar --handler=proxy	# http
+  ```
+
+- [**New**](https://micro.mu/docs/new.html) - The **micro new** command is a quick way to generate boilerplate templates for micro services.
+
+- [**Run**](https://micro.mu/docs/run.html)  - The **micro run** command manages the lifecycle of a microservice. 
 
 ### 参考资料
 
