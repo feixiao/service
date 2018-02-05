@@ -21,3 +21,7 @@
 
 + [《Redis 命令参考》](http://redisdoc.com/)
 
+
+#### 工具
++ [Redis GUI](https://github.com/uglide/RedisDesktopManager)
+
