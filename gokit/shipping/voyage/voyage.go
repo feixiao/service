@@ -23,7 +23,7 @@ func New(n Number, s Schedule) *Voyage {
 
 // Schedule 表示 航线规划
 type Schedule struct {
-	CarrierMovements []CarrierMovement //  ??? []*CarrierMovement
+	CarrierMovements []CarrierMovement //  由一系列满足Specification（规格） 的CarrierMovement（运输动作） 来完成运送目标。
 }
 
 // CarrierMovement 表示船只从一个地方航行到另一个地方的。

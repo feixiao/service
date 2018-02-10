@@ -12,16 +12,16 @@ import (
 // TrackingID 唯一表示一个特定的货物
 type TrackingID string
 
-// Cargo is the central class in the domain model.
+// Cargo is the central class in the domain model.  表示货物
 type Cargo struct {
 	TrackingID         TrackingID				// 说明Cargo是一个实体
-	Origin             location.UNLocode
-	RouteSpecification RouteSpecification
-	Itinerary          Itinerary
-	Delivery           Delivery
+	Origin             location.UNLocode		// 起点
+	RouteSpecification RouteSpecification	// 规定的运输起点、终点以及到达期限
+	Itinerary          Itinerary				// 中途经历的路线
+	Delivery           Delivery				// 当前的运输状态
 }
 
-// SpecifyNewRoute specifies a new route for this cargo.
+// SpecifyNewRoute specifies a new route for this cargo. 创建新的运输规划(不使用引用是因为这样的对RouteSpecification不影响其他Cargo)
 func (c *Cargo) SpecifyNewRoute(rs RouteSpecification) {
 	c.RouteSpecification = rs
 	c.Delivery = c.Delivery.UpdateOnRouting(c.RouteSpecification, c.Itinerary)
@@ -68,16 +68,15 @@ func NextTrackingID() TrackingID {
 	return TrackingID(strings.Split(strings.ToUpper(uuid.New()), "-")[0])
 }
 
-// RouteSpecification Contains information about a route: its origin,
-// destination and arrival deadline.
+// RouteSpecification Contains information about a route: its origin, destination and arrival deadline.
+// RouteSpecification定义路线的启动、终点以及到达期限。
 type RouteSpecification struct {
 	Origin          location.UNLocode
 	Destination     location.UNLocode
 	ArrivalDeadline time.Time
 }
 
-// IsSatisfiedBy checks whether provided itinerary satisfies this
-// specification.
+// IsSatisfiedBy checks whether provided itinerary satisfies this specification.
 func (s RouteSpecification) IsSatisfiedBy(itinerary Itinerary) bool {
 	return itinerary.Legs != nil &&
 		s.Origin == itinerary.InitialDepartureLocation() &&

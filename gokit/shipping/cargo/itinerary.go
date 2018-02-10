@@ -27,7 +27,7 @@ func NewLeg(voyageNumber voyage.Number, loadLocation, unloadLocation location.UN
 	}
 }
 
-// Itinerary 表示如果从出发点到达目的地
+// Itinerary 表示如果从出发点到达目的地之间经历的路线
 type Itinerary struct {
 	Legs []Leg `json:"legs"`
 }

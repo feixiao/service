@@ -9,18 +9,19 @@ import (
 
 // Delivery is the actual transportation of the cargo, as opposed to the
 // customer requirement (RouteSpecification) and the plan (Itinerary).
+// 跟Cargo是一对一的关系，所属于某个具体的Cargo
 type Delivery struct {
-	Itinerary               Itinerary
-	RouteSpecification      RouteSpecification
-	RoutingStatus           RoutingStatus
-	TransportStatus         TransportStatus
-	NextExpectedActivity    HandlingActivity
-	LastEvent               HandlingEvent
-	LastKnownLocation       location.UNLocode
-	CurrentVoyage           voyage.Number
+	Itinerary               Itinerary				// 规定的运输起点、终点以及到达期限，跟Cargo中Itinerary有重复
+	RouteSpecification     RouteSpecification   // 中途经历的路线，跟Cargo中Itinerary有重复
+	RoutingStatus           RoutingStatus		// 路由选择状态 NotRouted、Routed和Misrouted
+	TransportStatus         TransportStatus		// 运输状态 NotReceived、InPort、OnboardCarrier、Claimed、Unknown
+	NextExpectedActivity   HandlingActivity
+	LastEvent               HandlingEvent			// 最处理的事件
+	LastKnownLocation       location.UNLocode	// 最近一个已知位置
+	CurrentVoyage           voyage.Number			// 当前所在航线
 	ETA                     time.Time
-	IsMisdirected           bool
-	IsUnloadedAtDestination bool
+	IsMisdirected           bool					// 是否出现地址错误问题
+	IsUnloadedAtDestination bool					// 是否出现在目的地没有卸载的情况
 }
 
 // UpdateOnRouting creates a new delivery snapshot to reflect changes in
