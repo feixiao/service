@@ -76,11 +76,13 @@ func newDelivery(lastEvent HandlingEvent, itinerary Itinerary, rs RouteSpecifica
 
 // Below are internal functions used when creating a new delivery.
 
+// 获取路由选择状态
 func calculateRoutingStatus(itinerary Itinerary, rs RouteSpecification) RoutingStatus {
 	if itinerary.Legs == nil {
 		return NotRouted
 	}
 
+	// Itinerary和RouteSpecification的起点终点相同说明已经被分配
 	if rs.IsSatisfiedBy(itinerary) {
 		return Routed
 	}
