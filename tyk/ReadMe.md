@@ -10,10 +10,18 @@
 
   ```
   govendor sync
-  go install
+  go build
   ```
 
-  ​
+
+
+### 安装
+
+```
+sudo apt-get install redis-server
+./tyk # 启动程序
+```
+
 
 
 
