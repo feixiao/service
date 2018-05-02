@@ -1,6 +1,38 @@
 ## 使用autotools生成Makefile
 
+### 常用命令
 
+#### autoreconf --install
+
+根据Makefile.am和configure.ac生成configure等文件。 autoreconf -i 
+
+#### configure
+
+生成Makefile文件。
+
+#### make all
+
+生成全部产物。
+
+#### make install / make install-strip
+
+安装。
+
+#### make clean 
+
+删除make clean生成的产物。
+
+#### make  uninstall
+
+卸载。
+
+#### make distclean
+
+删除configure生成的产物。
+
+#### make dist
+
+打包程序
 
 
 
