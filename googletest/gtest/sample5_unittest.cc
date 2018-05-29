@@ -31,11 +31,14 @@
 
 // This sample teaches how to reuse a test fixture in multiple test
 // cases by deriving sub-fixtures from it.
-//
+// 这个示例教给大家怎么通过子fixtrues在一个多重的测试案例中重复使用一个“test fixture” 
+
 // When you define a test fixture, you specify the name of the test
 // case that will use this fixture.  Therefore, a test fixture can
 // be used by only one test case.
-//
+// 当你定义一个test fixture的时候，有要指定要用到该fixture的测试案例的名称 
+// 所以，一个test fixtrue只能够被咦一个测试案例使用 
+ 
 // Sometimes, more than one test cases may want to use the same or
 // slightly different test fixtures.  For example, you may want to
 // make sure that all tests for a GUI library don't leak important
@@ -43,6 +46,10 @@
 // this by putting the shared logic in a super (as in "super class")
 // test fixture, and then have each test case use a fixture derived
 // from this super fixture.
+// 有时候，也许更多的测试案例想使用一个相同或者只有少许差别的test fixtures  
+// 举例来说，你也许想确保所有针对GUI库的测试不会漏掉那些比如字体和笔刷之类的重要的系统资源
+// 在gtest中，你想要实现这个可以通过把那些共同逻辑放入一个超级的test fixture中  
+// 并且可以通过从超级test fixture派生来得到每个测试案例所需的fixture  
 
 #include <limits.h>
 #include <time.h>
