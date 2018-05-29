@@ -66,6 +66,27 @@
 #include "sample3-inl.h"
 #include "gtest/gtest.h"
 
+
+// 当你发现自己编写了两个或多个测试来操作同样的数据，你可以采用一个测试固件。
+// 它让你可以在多个不同的测试中重用同样的对象配置。
+
+// 创建测试固件的步骤
+// 1: 创建一个类继承自testing::Test。将其中的成员声明为protected:或是public:，因为我们想要从子类中存取固件成员。
+// 2: 在该类中声明你计划使用的任何对象。
+// 3: 如果需要，编写一个默认构造函数或者SetUp()函数来为每个测试准备对象。常见错误包括将SetUp()拼写为Setup()（小写了u）——不要让它发生在你身上。
+// 4: 如果需要，编写一个析构函数或者TearDown()函数来释放你在SetUp()函数中申请的资源。要知道什么时候应该使用构造函数/析构函数，什么时候又应该使用SetUp()/TearDown()函数，阅读我们的FAQ。
+// 5: 如果需要，定义你的测试所需要共享的子程序。
+
+// 注：当我们要使用固件时，使用TEST_F()替换掉TEST()
+// 对于TEST_F()中定义的每个测试，Google Test将会：
+//    1: 在运行时创建一个全新的测试固件
+//    2: 马上通过SetUp()初始化它，
+//    3: 运行测试
+//    4: 调用TearDown()来进行清理工作
+//    5: 删除测试固件。
+//    注意，同一测试案例中，不同的测试拥有不同的测试固件。Google Test在创建下一个测试固件前总是会对现有固件进行删除。
+//    Google Test不会对多个测试重用一个测试固件。测试对测试固件的改动并不会影响到其他测试。
+
 // To use a test fixture, derive a class from testing::Test.
 class QueueTest : public testing::Test {
  protected:  // You should make the members protected s.t. they can be
@@ -122,6 +143,7 @@ class QueueTest : public testing::Test {
 // Tests the default c'tor.
 TEST_F(QueueTest, DefaultConstructor) {
   // You can access data in the test fixture here.
+  // Setup中 q0_ 没有添加数据，所以测试没有问题
   EXPECT_EQ(0u, q0_.Size());
 }
 
