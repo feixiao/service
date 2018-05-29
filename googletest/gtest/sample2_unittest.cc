@@ -69,7 +69,7 @@ TEST(MyString, DefaultConstructor) {
   // we have to live with this fact.
   //
   // </TechnicalDetails>
-  EXPECT_STREQ(NULL, s.c_string());
+  EXPECT_STREQ(NULL, s.c_string());   // EXPECT_STREQ(str1,str2);	the two C strings have the same content
 
   EXPECT_EQ(0u, s.Length());
 }

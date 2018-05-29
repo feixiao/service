@@ -76,27 +76,24 @@
 // Tests Factorial().
 
 // Tests factorial of negative numbers.
+// 第一个参数是测试用例名，第二个参数是测试名
+// 随后的测试结果将以"测试用例名.测试名"的形式给出  
 TEST(FactorialTest, Negative) {
   // This test is named "Negative", and belongs to the "FactorialTest"
   // test case.
-  EXPECT_EQ(1, Factorial(-5));
-  EXPECT_EQ(1, Factorial(-1));
-  EXPECT_GT(Factorial(-10), 0);
+  EXPECT_EQ(1, Factorial(-5));    // 期望Factorial(-5) 函数返回值为 1
+  EXPECT_EQ(1, Factorial(-1));  
+  EXPECT_NE(1,Factorial(2));      // EXPECT_NE(val1,val2);	val1 != val2
+  EXPECT_GT(Factorial(-10), 0);   // EXPECT_GT(val1,val2);  val1 > val2
+  EXPECT_GE(Factorial(3), 2);     // EXPECT_GE(val1,val2);  val1 >= val2
+//  EXPECT_EQ(1,0);               // 当失败时，EXCEPT_*产生一个非致命失败，允许函数继续运行。
+//  ASSERT_EQ(1,0);               // 当失败时，ASSERT_*产生一个致命失败并从当前函数返回
 
-  // <TechnicalDetails>
-  //
-  // EXPECT_EQ(expected, actual) is the same as
-  //
-  //   EXPECT_TRUE((expected) == (actual))
-  //
-  // except that it will print both the expected value and the actual
-  // value when the assertion fails.  This is very helpful for
-  // debugging.  Therefore in this case EXPECT_EQ is preferred.
-  //
-  // On the other hand, EXPECT_TRUE accepts any Boolean expression,
-  // and is thus more general.
-  //
-  // </TechnicalDetails>
+  EXPECT_LT(Factorial(3),7);      // EXPECT_LT(val1,val2);	val1 < val2
+  EXPECT_LE(Factorial(3),7);      // EXPECT_LE(val1,val2);	val1 <= val2
+
+//  EXPECT_EQ(1,0);
+  ASSERT_EQ(1,0);
 }
 
 // Tests factorial of 0.

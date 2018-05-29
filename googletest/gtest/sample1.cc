@@ -44,6 +44,7 @@ int Factorial(int n) {
 }
 
 // Returns true iff n is a prime number.
+// 功能是判断素数
 bool IsPrime(int n) {
   // Trivial case 1: small numbers
   if (n <= 1) return false;
