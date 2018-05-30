@@ -34,11 +34,17 @@
 // value-parameterized tests. Each test in the test case has
 // a parameter that is an interface pointer to an implementation
 // tested.
+// 这个示例用来展示如何使用值参数测试法去测试多个实现了相同接口（类）的共同属性（又叫做接口测试）,
+// 每个在测试案例中的测试都有一个参数，这个参数是一个指针并且指向已经实现的测试  
 
 // The interface and its implementations are in this header.
+// 这些接口和它的相关实现都在这个头文件中 
 #include "prime_tables.h"
 
 #include "gtest/gtest.h"
+
+
+#define GTEST_HAS_PARAM_TEST 1
 
 #if GTEST_HAS_PARAM_TEST
 
@@ -50,6 +56,8 @@ using ::testing::Values;
 // instead of reusing them.  In this sample we will define a simple factory
 // function for PrimeTable objects.  We will instantiate objects in test's
 // SetUp() method and delete them in TearDown() method.
+// 按照通常的惯例，已经被测试过的实体不应该在多个测试之间重复利用，所以你应该为每个测试创建并销毁他们
+// 在这个例子中我们将为PrimeTable实体定义一个简单的工厂方法,他们将在测试的SetUp()方法中实例化实体并且在TearDown()中删除他们  
 typedef PrimeTable* CreatePrimeTableFunc();
 
 PrimeTable* CreateOnTheFlyPrimeTable() {
@@ -65,6 +73,9 @@ PrimeTable* CreatePreCalculatedPrimeTable() {
 // can refer to the test parameter by GetParam().  In this case, the test
 // parameter is a factory function which we call in fixture's SetUp() to
 // create and store an instance of PrimeTable.
+// 在测试体、fixture的构造函数、 SetUp(), 和 TearDown()里，你可以通过GetParam()函数来指向测试参数。
+// 在这个案例中，这个测试参数是一个PrimeTableFactory接口的指针。
+// 我们用这个指针在fixture的SetUp()函数中去创建和存储PrimeTable的一个实例  
 class PrimeTableTest : public TestWithParam<CreatePrimeTableFunc*> {
  public:
   virtual ~PrimeTableTest() { delete table_; }
@@ -109,9 +120,11 @@ TEST_P(PrimeTableTest, CanGetNextPrime) {
 // or bind them to a list of values which will be used as test parameters.
 // You can instantiate them in a different translation module, or even
 // instantiate them several times.
-//
+// 为了运行这个值参数化测试，你需要实例化他们并且把他们绑定到可能被用作测试参数的一系列值上,
+// 你可以在一个不同的调用模块实例化他们，甚至可以实例化他们多次 
 // Here, we instantiate our tests with a list of two PrimeTable object
 // factory functions:
+// 在这里，我们利用两个PrimeTable实体工程方法的列表来实例化我们的测试  
 INSTANTIATE_TEST_CASE_P(
     OnTheFlyAndPreCalculated,
     PrimeTableTest,

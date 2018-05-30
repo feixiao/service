@@ -37,7 +37,7 @@
 // case that will use this fixture.  Therefore, a test fixture can
 // be used by only one test case.
 // 当你定义一个test fixture的时候，有要指定要用到该fixture的测试案例的名称 
-// 所以，一个test fixtrue只能够被咦一个测试案例使用 
+// 所以，一个test fixtrue只能够被一个测试案例使用 
  
 // Sometimes, more than one test cases may want to use the same or
 // slightly different test fixtures.  For example, you may want to
@@ -58,13 +58,15 @@
 #include "sample1.h"
 
 // In this sample, we want to ensure that every test finishes within
-// ~5 seconds.  If a test takes longer to run, we consider it a
-// failure.
+// ~5 seconds.  If a test takes longer to run, we consider it a failure.
+// 在这个示例中，我们想保证每个测试都在5秒钟之内完成,如果一个测试需要消耗跟多的时间去运行，那么我们认为这是测试的结果是失败的
 //
 // We put the code for timing a test in a test fixture called
 // "QuickTest".  QuickTest is intended to be the super fixture that
 // other fixtures derive from, therefore there is no test case with
 // the name "QuickTest".  This is OK.
+// 我们将给一个测试计时的代码放入一个被称作“QuickTest”的test fixture中,
+// QuickTest被设计成其他子fixtures可以用来派生的超级fixture,所以，这里没有命名为“QuickTest”的测试案例，这样就可以了 
 //
 // Later, we will derive multiple test fixtures from QuickTest.
 class QuickTest : public testing::Test {
@@ -84,6 +86,7 @@ class QuickTest : public testing::Test {
     // Asserts that the test took no more than ~5 seconds.  Did you
     // know that you can use assertions in SetUp() and TearDown() as
     // well?
+    // 断言这个测试花费的时间没有超过5分钟  
     EXPECT_TRUE(end_time - start_time_ <= 5) << "The test took too long.";
   }
 
@@ -95,6 +98,7 @@ class QuickTest : public testing::Test {
 // We derive a fixture named IntegerFunctionTest from the QuickTest
 // fixture.  All tests using this fixture will be automatically
 // required to be quick.
+// 我们从QuickTest派生一个名叫“IntegerFunctionTest”的fixture   
 class IntegerFunctionTest : public QuickTest {
   // We don't need any more logic than already in the QuickTest fixture.
   // Therefore the body is empty.
@@ -104,6 +108,7 @@ class IntegerFunctionTest : public QuickTest {
 // Now we can write tests in the IntegerFunctionTest test case.
 
 // Tests Factorial()
+// 测试计算阶乘的函数Factorial()  
 TEST_F(IntegerFunctionTest, Factorial) {
   // Tests factorial of negative numbers.
   EXPECT_EQ(1, Factorial(-5));
@@ -148,6 +153,7 @@ TEST_F(IntegerFunctionTest, IsPrime) {
 // The QueueTest test fixture has some logic and shared objects in
 // addition to what's in QuickTest already.  We define the additional
 // stuff inside the body of the test fixture, as usual.
+// 通常我们在这个测试fixture的内部定义一些额外的东西   
 class QueueTest : public QuickTest {
  protected:
   virtual void SetUp() {
