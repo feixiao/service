@@ -11,7 +11,7 @@ CXXFLAGS+=-fPIC -O2 $(INCLUDE_FLAGS)
 all : $(TARGET)
 
 $(TARGET) : $(OBJS)
-	$(CXX) -o $@ $^ -L. -lgtest -lgmock
+	$(CXX) -o $@ $^ -L. -lgtest -lgmock -lpthread
 
 clean :
 	-rm -rf *.o $(TARGET)
