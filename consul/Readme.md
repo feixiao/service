@@ -57,7 +57,7 @@ Consul是一个服务管理软件，支持多数据中心下，分布式高可�
 
 + 停止Agent
 
-​	使用 `Ctrl-C` 友好的退出。
+		使用 `Ctrl-C` 友好的退出。
 
 #### 服务
 
@@ -105,29 +105,10 @@ Consul是一个服务管理软件，支持多数据中心下，分布式高可�
 
 可以修改文件然后发送SGIHUP信号给Agent修改。或者通过HTTP API进行修改。
 
-#### Consul集群
-
-##### 启动Agent
-
-##### 加入集群
-
-##### 启动的时候自动加入集群
-
-##### 查询节点
-
-##### 离开集群
-
-
-
-#### 健康检查
-
-#### 键值数据
-
-#### Web UI
-
 ### 参考资料
 
 + [ 《intro》](https://www.consul.io/intro/index.html)
 
 
 + [ 《 consul 入门》](http://blog.csdn.net/viewcode/article/details/45915179)
++ [libraries-and-sdks](https://www.consul.io/api/libraries-and-sdks.html)
