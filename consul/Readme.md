@@ -105,6 +105,16 @@ Consul是一个服务管理软件，支持多数据中心下，分布式高可�
 
 可以修改文件然后发送SGIHUP信号给Agent修改。或者通过HTTP API进行修改。
 
+
+
+### 例子实现
+
++ [consul-leader-election](https://github.com/dpires/consul-leader-election)
+
++ [consul-notifications)](https://github.com/dpires/consul-notifications)
+
+  
+
 ### 参考资料
 
 + [ 《intro》](https://www.consul.io/intro/index.html)
