@@ -87,4 +87,5 @@
 
 + [《CentOS 7.2下安装Prometheus和Grafana监控MySQL服务器性能》](http://www.linuxidc.com/Linux/2017-06/144972.htm)
 + [《prometheus + grafana安装部署（centos6.8）》](http://www.cnblogs.com/shhnwangjian/p/6878199.html)
++ [《Prometheus 实战》](https://songjiayang.gitbooks.io/prometheus/content/introduction/what.html)
 
