@@ -30,20 +30,20 @@
 
 + **Counter**
 
-  counter表示一个累计的度量，该值只会增加。
+  Counter 表示收集的数据是按照某个趋势（增加／减少）一直变化的，我们往往用它记录服务请求总量、错误总数等。 
 
 
 + **Gauge**
 
-  gauge表示单个数值的度量上可以任意增减。
+  Gauge 表示搜集的数据是一个瞬时的值，与时间没有关系，可以任意变高变低，往往可以用来记录内存使用率、磁盘使用率等。
 
 + **Histogram**
 
-  Histogram表示样例观察，并将它们放在可配置的桶（configurable buckets）中。它还提供了所有观测值的总和。
+  Histogram 由 `<basename>_bucket{le="<upper inclusive bound>"}`，`<basename>_bucket{le="+Inf"}`, `<basename>_sum`，`<basename>_count` 组成，主要用于表示一段时间范围内对数据进行采样（通常是请求持续时间或响应大小），并能够对其指定区间以及总数进行统计，通常它采集的数据展示为直方图。 
 
 + **Summary**
 
-  Summary跟Histogram类似。它还提供了一个观测的总数量和所有观测值的总和,它计算可配置的分位数滑动时间窗口。
+  Summary 和 Histogram 类似，由 `<basename>{quantile="<φ>"}`，`<basename>_sum`，`<basename>_count`组成，主要用于表示一段时间内数据采样结果（通常是请求持续时间或响应大小），它直接存储了 quantile 数据，而不是根据统计区间计算出来的。 
 
 ### Sample
 
