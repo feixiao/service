@@ -122,7 +122,7 @@ docker run -d --name kong-dashboard \
 
 通过图形化界面管理Kong
 
-![1](./imgs/1.jpg)
+![1](./imgs/1.JPG)
 
 #### Kong社区版支持的插件
 
