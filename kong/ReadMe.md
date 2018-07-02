@@ -191,3 +191,5 @@ docker run -d --name kong-dashboard \
 
 + [Install Kong](https://docs.konghq.com/install/ubuntu/)
 + [《Kong：插件介绍》](https://blog.csdn.net/liumiaocn/article/details/80488524)
++ [《微服务与API 网关（上）: 为什么需要API网关？》](https://mp.weixin.qq.com/s?__biz=MzA5MzQ2NTY0OA==&mid=2650797020&idx=1&sn=48bb5a4e232a3680c8890ccb7e581b0a&chksm=88562e83bf21a7950cdac1680498d433a042f219568add78d8d45eb39c30f8a8a3f7588e39df&scene=21#wechat_redirect)
++ [《微服务与API 网关（下）: Kong能为我们做什么？》](https://mp.weixin.qq.com/s/Woktbld0-7bd73ySmVA3ug)
