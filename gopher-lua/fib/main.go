@@ -14,10 +14,10 @@ func main() {
 	}
 	// 调用fib(n)
 	err := L.CallByParam( lua.P{
-		Fn: L.GetGlobal("fib"),	// 获取fib函数引用
+		Fn: L.GetGlobal("fib"),		// 获取fib函数引用
 		NRet: 1,					// 指定返回值数量
 		Protect: true,				// 如果出现异常，是panic还是返回err
-	}, lua.LNumber(3))				// 传递输入参数 n=10
+	}, lua.LNumber(3))				// 传递输入参数 n=3
 	if err != nil {
 		panic(err)
 	}

@@ -4,6 +4,7 @@ import (
 	lua "github.com/yuin/gopher-lua"
 )
 
+// Golang自定义结构体
 type Person struct {
 	Name string
 }
@@ -11,9 +12,12 @@ type Person struct {
 const luaPersonTypeName = "person"
 
 func registerPersonType(L *lua.LState) {
+	// 使用名字创建
 	mt := L.NewTypeMetatable(luaPersonTypeName)
 	L.SetGlobal(luaPersonTypeName,mt)
+	// Lua中的new方法，对应Golang中的newPerson
 	L.SetField(mt,"new",L.NewFunction(newPerson))
+	// 管理内部函数(通过map映射)
 	L.SetField(mt,"__index",L.SetFuncs(L.NewTable(),personMethods))
 }
 
@@ -27,7 +31,7 @@ func newPerson(L *lua.LState) int {
 }
 
 var personMethods = map[string]lua.LGFunction {
-	"name":personGetSetName,
+	"name":personGetSetName, 		// name方法关联personGetSetName方法
 }
 
 func checkPerson(L *lua.LState) *Person {
