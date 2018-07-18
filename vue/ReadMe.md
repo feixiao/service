@@ -6,3 +6,9 @@
 
 #### 组件库
 
++ [《VUE UI框架比较》](https://segmentfault.com/a/1190000008648003)
++ [iView](https://www.iviewui.com/)
+
+#### 参考资料
++ [《使用 vue-cli 搭建项目》](https://blog.csdn.net/wisewrong/article/details/55212684)
++ [《vue+webpack的快速使用指南》](https://segmentfault.com/a/1190000010960666)
