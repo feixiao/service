@@ -77,6 +77,7 @@
 #### 服务网关
 
 + [Micro API](https://github.com/micro/micro/tree/master/api) 为访问微服务提供了 HTTP 服务和路由功能的 API 网管。在 Micro 中，它提供一个单一的入口，它可以被用作反向代理，或者将 HTTP 请求转换成 RPC。
++ [Kong](https://github.com/Kong/kong#features) 一个基于Nginx的API Gateway。提供了诸如身份认证，权限控制，流量控制，日志等一系列API相关的组件。 
 
 #### 负载均衡
 
