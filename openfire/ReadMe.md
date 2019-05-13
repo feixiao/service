@@ -21,9 +21,9 @@
 
 ### 客户端
 #### Golang
-
-
-
++ [go-xmpp](https://github.com/FluuxIO/go-xmpp)
+#### C++ 
++ [gloox](https://camaya.net/gloox/)
 
 #### 参考资料
 + [<<Openfire 的安装和配置>>](https://www.cnblogs.com/hoojo/archive/2012/05/17/2506769.html)
