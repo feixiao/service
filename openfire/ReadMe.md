@@ -20,11 +20,12 @@
     ```
 
 ### 客户端
-#### Golang
-+ [go-xmpp](https://github.com/FluuxIO/go-xmpp)
-#### C++ 
-+ [gloox](https://camaya.net/gloox/)
++ [go-xmpp](https://github.com/FluuxIO/go-xmpp) Golang客户端库
++ [gloox](https://camaya.net/gloox/) C++客户端库
++ [poezio](https://github.com/poezio/poezio) Python命令行客户端程序
++ [spark](https://github.com/igniterealtime/Spark) 官方客户端程序
+
 
 #### 参考资料
-+ [<<Openfire 的安装和配置>>](https://www.cnblogs.com/hoojo/archive/2012/05/17/2506769.html)
-+ [<<OpenFire深入浅出>>](https://pan.baidu.com/s/1hqDxAtQ?errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=)
++ [《Openfire 的安装和配置》](https://www.cnblogs.com/hoojo/archive/2012/05/17/2506769.html)
++ [《OpenFire深入浅出》](https://pan.baidu.com/s/1hqDxAtQ?errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=)
