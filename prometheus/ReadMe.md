@@ -28,11 +28,11 @@
 
 +  修改配置文件
 
-   ```
+   ```shell
     #  添加监控目标
    - job_name: 'node'
       static_configs:
-        - targets: ['localhost:9100']
+        - targets: ['localhost:9100']  # 注意端口
    ```
 + 启动
 
@@ -70,6 +70,10 @@
 + 数据关联
 
   通过添加数据库的方式进行。
+  
++ dashborad选择
+
+  https://grafana.com/dashboards/1860
 
 
 ### 客户机安装exporter
@@ -88,4 +92,5 @@
 + [《CentOS 7.2下安装Prometheus和Grafana监控MySQL服务器性能》](http://www.linuxidc.com/Linux/2017-06/144972.htm)
 + [《prometheus + grafana安装部署（centos6.8）》](http://www.cnblogs.com/shhnwangjian/p/6878199.html)
 + [《Prometheus 实战》](https://songjiayang.gitbooks.io/prometheus/content/introduction/what.html)
++ [Grafana+Prometheus打造全方位立体监控系统](https://www.cnblogs.com/smallSevens/p/7805842.html)
 
