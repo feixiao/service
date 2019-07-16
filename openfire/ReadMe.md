@@ -19,6 +19,9 @@
     docker run --name openfire -d --restart=always  --publish 9090:9090     --publish 5222:5222 --publish 7777:7777   --volume D:/docker_volume/    openfire:/var/lib/openfire gizmotronic/openfire:4.3.2
     ```
 
++ 管理页面 http://localhost:9090  注意修改 域
+
+
 ### 客户端
 + [go-xmpp](https://github.com/FluuxIO/go-xmpp) Golang客户端库
 + [gloox](https://camaya.net/gloox/) C++客户端库
