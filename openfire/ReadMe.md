@@ -27,5 +27,6 @@
 
 
 #### 参考资料
++ [《XMPP》](https://xmpp.org/)
 + [《Openfire 的安装和配置》](https://www.cnblogs.com/hoojo/archive/2012/05/17/2506769.html)
 + [《OpenFire深入浅出》](https://pan.baidu.com/s/1hqDxAtQ?errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=)
