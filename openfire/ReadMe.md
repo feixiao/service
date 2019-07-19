@@ -26,6 +26,7 @@
 + [go-xmpp](https://github.com/FluuxIO/go-xmpp) Golang客户端库
 + [gloox](https://camaya.net/gloox/) C++客户端库
 + [poezio](https://github.com/poezio/poezio) Python命令行客户端程序
++ [slixmpp](https://github.com/poezio/slixmpp) Python客户端库
 + [spark](https://github.com/igniterealtime/Spark) 官方客户端程序
 
 
