@@ -50,9 +50,14 @@
 + 安装grafana
 
   ```
+  # Ubuntu
   wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.6.3_amd64.deb
   sudo apt-get install -y adduser libfontconfig
   sudo dpkg -i grafana_4.6.3_amd64.deb
+  
+  # CentOS
+  wget https://dl.grafana.com/oss/release/grafana-6.2.5-1.x86_64.rpm
+  sudo yum localinstall grafana-6.2.5-1.x86_64.rpm
   ```
 
 
