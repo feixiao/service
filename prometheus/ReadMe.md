@@ -37,7 +37,8 @@
 + 启动
 
   ```
-    ./prometheus --config.file=prometheus.yml
+    ./prometheus --config.file=prometheus.yml  
+    ./prometheus --config.file=prometheus.yml   --web.listen-address=:8091  # 修改端口
   ```
 
 
