@@ -8,7 +8,15 @@ discovery是B站参考Eureka自研的服务注册发现系统。其前期使用Z
 
 ### 安装部署
 + WSL 不能编译运行（无法采集系统基础信息）
++ Windows上使用Docker
+    ```
+    docker pull golang:1.12.7
+    docker run -it --name gobuild -v D:\volumes\golang:/go golang
 
+    # 配置golang变量
+    export GOPROXY=https://goproxy.io
+    export GO111MODULE=on
+    ```
 
 ### 客户端接入
 
