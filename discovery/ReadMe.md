@@ -17,8 +17,14 @@ discovery是B站参考Eureka自研的服务注册发现系统。其前期使用Z
     export GOPROXY=https://goproxy.io
     export GO111MODULE=on
     ```
++ 编译运行
+    ```
+    cd discovery/cmd/discovery
+    go build
+    ./discovery -conf discovery-example.toml
+    ```
 
-### 客户端接入
+### 客户端接入(参考demo)
 
 ### 参考资料
 + [discovery介绍](https://github.com/bilibili/discovery/blob/master/doc/intro.md)
