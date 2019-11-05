@@ -66,6 +66,12 @@
 
   ```
   service grafana-server start
+  
+  systemctl daemon-reload
+  systemctl start grafana-server
+  systemctl status grafana-server
+ 
+  systemctl enable grafana-server.service
   ```
 
 
@@ -79,7 +85,7 @@
   
 + dashborad选择
 
-  https://grafana.com/dashboards/1860
+  https://grafana.com/dashboards/1860　　（选择13版本）
 
 
 ### 客户机安装exporter
@@ -99,4 +105,5 @@
 + [《prometheus + grafana安装部署（centos6.8）》](http://www.cnblogs.com/shhnwangjian/p/6878199.html)
 + [《Prometheus 实战》](https://songjiayang.gitbooks.io/prometheus/content/introduction/what.html)
 + [Grafana+Prometheus打造全方位立体监控系统](https://www.cnblogs.com/smallSevens/p/7805842.html)
++ [《通过consul实现prometheus动态服务发现以及告警策略注册》](https://blog.csdn.net/weixin_38645718/article/details/84773305)
 
