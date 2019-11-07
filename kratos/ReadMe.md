@@ -85,7 +85,7 @@ go build
 #### config
 
 + [本地配置](https://github.com/bilibili/kratos/blob/master/doc/wiki-cn/config.md)
-+ 配置中心???
++ 配置中心使用携程的apollo
 
 #### ecode
 
