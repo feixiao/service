@@ -56,3 +56,4 @@
 + [protocol-buffers](https://developers.google.com/protocol-buffers/)
 + [gRPC初接触](https://samael65535.github.io/2017-05-18/grpc_newb/)
 + [Go gRPC 调试工具 ](http://securedsearch.lavasoft.com/)
++ [Grpc兼容HTTP协议文档自动生成网关](https://my.oschina.net/wenzhenxi/blog/3023874)
