@@ -9,6 +9,8 @@ Kratos是bilibili开源的一套Go微服务框架，包含大量微服务相关�
 Go version>=1.12 and GO111MODULE=on
 ```
 
+[三方工具安装](https://github.com/bilibili/kratos/blob/master/doc/wiki-cn/install.md)
+
 #### 安装
 
 ```shell
