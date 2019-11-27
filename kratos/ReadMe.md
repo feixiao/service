@@ -33,7 +33,6 @@ go build
 ### 详细介绍
 
 #### http blademaster
-+ 因为 bm 不支持 restful 格式 API，所以不支持映射参数到Path。
 
 + 内置中间件
 
