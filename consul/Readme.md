@@ -33,6 +33,8 @@ Consul是一个服务管理软件，支持多数据中心下，分布式高可�
 
   ```shell
   consul agent -dev
+
+  #　consul agent -bootstrap-expect 1 -server -data-dir /data/consul -node=dev229.3 -bind=172.17.229.3  -enable-script-checks=true -client=0.0.0.0 -ui
   ```
 
   上面consul agent启动在控制台输出一些日志，从日志我们可以知道Agent运行在Server模式，同时已经选举自己为集群的“领导”。
@@ -118,7 +120,6 @@ Consul是一个服务管理软件，支持多数据中心下，分布式高可�
 ### 参考资料
 
 + [ 《intro》](https://www.consul.io/intro/index.html)
-
 
 + [ 《 consul 入门》](http://blog.csdn.net/viewcode/article/details/45915179)
 + [libraries-and-sdks](https://www.consul.io/api/libraries-and-sdks.html)
