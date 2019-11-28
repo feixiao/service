@@ -15,6 +15,8 @@ docker-compose up -d
 #### 登入服务
 ```
 # 浏览器浏览 http://localhost:7300/
+
+# 用户名不存在会自己创建
 默认用户名为root 密码为123456
 ```
 
