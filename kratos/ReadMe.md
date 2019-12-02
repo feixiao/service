@@ -121,7 +121,7 @@ go build
     .
     ├── dao.bts.go      # 自动生成的缓存回源代码
     ├── dao.go          # 用于生成缓存回源代码
-    ├── db.go
+    ├── db.go           # 定义如何从数据库返回实体内容
     ├── mc.cache.go     # 自动生成的缓存代码
     ├── mc.go           # 添加mc缓存interface定义，用于生成缓存代码
     └── redis.go      
