@@ -117,8 +117,17 @@ go build
 +  [swagger](kratos-swagger.md)　自动生成swagger文档。
 
 +  [genmc](https://github.com/bilibili/kratos/blob/master/doc/wiki-cn/kratos-genmc.md)　缓存代码生成。
+    ```
+    .
+    ├── dao.bts.go      # 自动生成的缓存回源代码
+    ├── dao.go          # 用于生成缓存回源代码
+    ├── db.go
+    ├── mc.cache.go     # 自动生成的缓存代码
+    ├── mc.go           # 添加mc缓存interface定义，用于生成缓存代码
+    └── redis.go      
+    ```
 
-+  [genbts](https://github.com/bilibili/kratos/blob/master/doc/wiki-cn/kratos-genbts.md)  缓存回源代码生成。
++  [genbts](https://github.com/bilibili/kratos/blob/master/doc/wiki-cn/kratos-genbts.md)  MC缓存回源代码生成。
 
 #### 限流bbr
 
