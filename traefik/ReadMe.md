@@ -23,3 +23,8 @@ docker-compose up -d --scale whoami=2
 # 测试
 curl -H Host:whoami.docker.localhost http://127.0.0.1
 ```
+
+#### Traefik后台
+```shell
+http://172.20.99.13:8080/dashboard/#/
+```
