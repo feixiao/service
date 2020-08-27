@@ -3,8 +3,8 @@
 #### [Docker Installation](https://docs.konghq.com/install/docker/)
 
 ```shell
-# 获取镜像(我们这边使用私有库镜像)
-docker pull kong
+# 获取镜像
+docker pull kong:2.1.3-centos
 docker pull postgres:9.6
 
 # 创建docker网络，用于容器之间的通信
@@ -27,7 +27,7 @@ docker run --rm \
      -e "KONG_PG_USER=kong" \
      -e "KONG_PG_PASSWORD=kong" \
      -e "KONG_CASSANDRA_CONTACT_POINTS=kong-database" \
-     kong:latest kong migrations bootstrap
+     kong:2.1.3-centos kong migrations bootstrap
   
     
 #启动Kong           
@@ -47,19 +47,12 @@ docker run -d --name kong \
      -p 8443:8443 \
      -p 8001:8001 \
      -p 8444:8444 \
-     kong
+     kong:2.1.3-centos
     
     
 # 浏览器确认
-http://172.17.228.81:8001/
+http://172.20.99.13:8001/
 ```
-
 
 #### 参考资料
 + [《Docker Installation》](https://docs.konghq.com/install/docker/)
-
-
-
-
-
-
