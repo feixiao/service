@@ -54,5 +54,24 @@ docker run -d --name kong \
 http://172.20.99.13:8001/
 ```
 
+### Run with docker-compose
+```shell
+docker-compose up  -d
+
+# 配置数据库
+# --rm 不添加
+docker run \
+     --network=kong-net \
+     -e "KONG_DATABASE=postgres" \
+     -e "KONG_PG_HOST=kong-database" \
+     -e "KONG_PG_USER=kong" \
+     -e "KONG_PG_PASSWORD=kong" \
+     -e "KONG_CASSANDRA_CONTACT_POINTS=kong-database" \
+     kong:2.1.3-centos kong migrations bootstrap
+
+   
+```
+访问：  http://172.20.99.13:1337
+
 #### 参考资料
 + [《Docker Installation》](https://docs.konghq.com/install/docker/)

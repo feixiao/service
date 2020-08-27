@@ -1,0 +1,63 @@
+version: "3.7"
+services: 
+  kong:
+    # 镜像版本，目前最新
+    image: kong:2.1.3-centos
+    environment:
+    # 数据持久化方式，使用postgres数据库
+     - "KONG_DATABASE=postgres"
+    # 数据库容器名称,Kong连接数据时使用些名称
+     - "KONG_PG_HOST=kong-database"
+    # 数据库名称
+     - "KONG_CASSANDRA_CONTACT_POINTS=kong-database"
+    # 日志记录目录
+     - "KONG_PROXY_ACCESS_LOG=/dev/stdout"
+     - "KONG_ADMIN_ACCESS_LOG=/dev/stdout"
+     - "KONG_PROXY_ERROR_LOG=/dev/stderr"
+     - "KONG_ADMIN_ERROR_LOG=/dev/stderr"
+    # 暴露的端口
+     - "KONG_ADMIN_LISTEN=0.0.0.0:8001, 0.0.0.0:8444 ssl"
+    ports:
+     - 8000:8000
+     - 8443:8443
+     - 8001:8001
+     - 8444:8444
+    # 使用docker网络
+    networks:
+     - kong-net
+    # 依赖数据库服务
+    depends_on:
+      - kong-database
+# kong 管理界面
+  konga:
+    image: pantsel/konga
+    environment:
+     - "TOKEN_SECRET=localhost"
+     - "NODE_ENV=production"
+    ports:
+     - 1337:1337
+    networks:
+     - kong-net
+    depends_on:
+      - kong-database
+# 数据库服务
+  kong-database:
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
+    environment:
+    # 访问数据库的用户
+      - POSTGRES_USER=kong
+      - POSTGRES_DB=kong
+      - POSTGRES_PASSWORD=kong
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    networks:
+      - kong-net
+    volumes:
+    # 同步时间
+      - /etc/localtime:/etc/localtime:ro
+    # 数据库持久化目录
+      - /data/data/postgresql:/var/lib/postgresql/data
+networks:
+  kong-net:
+    external: true
