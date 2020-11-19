@@ -20,6 +20,7 @@ func greetHandler(ctx *svc.ServiceContext) http.HandlerFunc {
 
 		l := logic.NewGreetLogic(r.Context(), ctx)
 		resp, err := l.Greet(req)
+
 		if err != nil {
 			httpx.Error(w, err)
 		} else {
