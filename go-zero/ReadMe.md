@@ -26,6 +26,11 @@ curl -i http://localhost:8888/greet/from/you
 
 - [great/ReadMe.md](./greet/ReadMe.md)
 
+#### 官方完整的 Demo
+
+- [bookstore](https://github.com/tal-tech/go-zero/tree/master/example/bookstore)
+- [文档](https://www.yuque.com/tal-tech/go-zero/rm435c)
+
 #### 源码分析
 
 https://gitee.com/frank2020/go-zero
