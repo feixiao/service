@@ -10,6 +10,18 @@
 
 https://www.yuque.com/tal-tech/go-zero/rm435c
 
+#### 快速使用
+
+```shell
+# 创建和启动服务
+goctl api new greet
+cd greet
+go run greet.go -f etc/greet-api.yaml
+
+# 访问接口
+curl -i http://localhost:8888/greet/from/you
+```
+
 #### 源码分析
 
 https://gitee.com/frank2020/go-zero
