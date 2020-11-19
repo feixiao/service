@@ -37,5 +37,5 @@ goctl api go -api greet.api  -dir ./
 goctl api java  -api greet.api  -dir ./client/java
 goctl api ts    -api greet.api  -dir ./client/ts
 
-# ios 通过 https://github.com/google/j2objc  从java反应到object-c
+# ios 通过 https://github.com/google/j2objc  从java翻译到object-c
 ```
