@@ -36,4 +36,6 @@ goctl api go -api greet.api  -dir ./
 # 1.0.27版本支持go、java、ts(typescript)、dart、kt(kotlin)
 goctl api java  -api greet.api  -dir ./client/java
 goctl api ts    -api greet.api  -dir ./client/ts
+
+# ios 通过 https://github.com/google/j2objc  从java反应到object-c
 ```
