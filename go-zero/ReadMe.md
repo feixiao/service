@@ -28,7 +28,7 @@ curl -i http://localhost:8888/greet/from/you
 
 #### 官方完整的 Demo
 
-- [bookstore](https://github.com/tal-tech/go-zero/tree/master/example/bookstore)
+- [bookstore](https://gitee.com/frank2020/go-zero/tree/master/example/bookstore) BookStore 运行和分析。
 - [文档](https://www.yuque.com/tal-tech/go-zero/rm435c)
 
 #### 源码分析
