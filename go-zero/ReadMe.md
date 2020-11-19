@@ -8,7 +8,7 @@
 
 #### 文档
 
-https://www.yuque.com/tal-tech/go-zero/rm435c
+https://www.yuque.com/tal-tech/go-zero
 
 #### 快速使用
 
