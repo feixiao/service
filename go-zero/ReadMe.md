@@ -24,7 +24,7 @@ curl -i http://localhost:8888/greet/from/you
 
 ##### 目录结构
 
-- [great/ReadMe.md](./greet/ReadMe.md)
+- [great/ReadMe.md](./greet/ReadMe.md) 目录结构、操作流程、以及客户端代码的生成。
 
 #### 官方完整的 Demo
 
