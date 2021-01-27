@@ -45,3 +45,7 @@ sudo mv istio-1.8.2 /opt/
 # 然后验证
 istioctl install --set profile=demo -y
 ```
+
+#### 案例
+
+- [《cloud-native-istio》](https://github.com/feixiao/cloud-native-istio)
