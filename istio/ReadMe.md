@@ -48,4 +48,5 @@ istioctl install --set profile=demo -y
 
 #### 案例
 
+- [《Istio 服务网格进阶实战》](https://www.servicemesher.com/istio-handbook/)
 - [《cloud-native-istio》](https://github.com/feixiao/cloud-native-istio)
