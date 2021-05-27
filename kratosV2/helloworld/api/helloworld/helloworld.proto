@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package api.helloworld;
+
+option go_package = "helloworld/api/helloworld;helloworld";
+option java_multiple_files = true;
+option java_package = "api.helloworld";
+
+service Helloworld {
+    rpc CreateHelloworld (CreateHelloworldRequest) returns (CreateHelloworldReply);
+    rpc UpdateHelloworld (UpdateHelloworldRequest) returns (UpdateHelloworldReply);
+    rpc DeleteHelloworld (DeleteHelloworldRequest) returns (DeleteHelloworldReply);
+    rpc GetHelloworld (GetHelloworldRequest) returns (GetHelloworldReply);
+    rpc ListHelloworld (ListHelloworldRequest) returns (ListHelloworldReply);
+}
+
+message CreateHelloworldRequest {}
+message CreateHelloworldReply {}
+
+message UpdateHelloworldRequest {}
+message UpdateHelloworldReply {}
+
+message DeleteHelloworldRequest {}
+message DeleteHelloworldReply {}
+
+message GetHelloworldRequest {}
+message GetHelloworldReply {}
+
+message ListHelloworldRequest {}
+message ListHelloworldReply {}
