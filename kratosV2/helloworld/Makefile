@@ -75,7 +75,11 @@ all:
 	make swagger;
 	make build;
 	make test;
+	make run;
 
+run:
+	./bin/helloworld -conf ./configs
+	
 # show help
 help:
 	@echo ''
