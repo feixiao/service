@@ -12,7 +12,7 @@
 #  打开 --appendonly yes
 sudo docker run -d --name redis_with_data \
 	-v ~/volumes/redis/data:/data \
-	-p 16379:16379 \
+	-p 16379:6379 \
 	--restart unless-stopped \
 	redis:4.0.14 redis-server --appendonly yes
 ```
@@ -45,10 +45,20 @@ juicefs format \
 	pics
 ```
 
+#### 映射到本地
+```shell
+$ sudo juicefs mount -d redis://127.0.0.1:16379/1 /mnt/jfs
+
+# 查看
+➜  ~ df -Th | grep /mnt
+JuiceFS:pics   fuse.juicefs  1.0P   64K  1.0P   1% /mnt/jfs
+```
+
 
 #### 参考资料
-+ [juicefs](https://github.com/juicedata/juicefs)
++ [juicefs](https://github.com/juicedata/juicefs/blob/main/docs/zh_cn/README.md)
 + [《JuiceFS Quick Start Guide》](https://github.com/juicedata/juicefs/blob/main/docs/en/quick_start_guide.md)
++ [使用场景](https://github.com/juicedata/juicefs/blob/main/docs/zh_cn/case.md)
 
 
 
