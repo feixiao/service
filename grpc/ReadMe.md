@@ -50,8 +50,10 @@
       └── route_guide_db.json
   ```
 
-+ [grpc-example](https://github.com/scottyw/grpc-example)
-
+#### 其他参考
++ [grpc-example](https://github.com/feixiao/grpc-example) grpc, grpc-gateway, swagger, grpc-streaming.
++ [grpc-lb](https://github.com/feixiao/grpc-lb) 基于grpc的load balance.
++ [grpc-up-and-running](https://github.com/feixiao/grpc-up-and-running) 《gRPC - Up and Running》随书代码。
 #### 参考资料
 + [《gRPC 官方文档中文版》](http://doc.oschina.net/grpc?t=56831)
 + [Go Quick Start](https://grpc.io/docs/quickstart/go.html)
